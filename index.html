@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
 </head>
 <body>
-    <h1>Lista de Tarefas</h1>
 
-    <div>
-        <input id="newTask" type="text">
-        <button>Adicionar</button>
+    <h1>Lista de Tarefas</h1>
+        
+    <div id="secao">
+        <input id="newTask" type="text" placeholder="Insira a tarefa">
+        <button onclick="verificarEntradaUsuario()">Adicionar</button>
     </div>
+             
+    <ul id="ul"></ul>
+           
+    <script src="script.js"></script>
 </body>
 </html>

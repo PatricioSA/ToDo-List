@@ -1,26 +1,21 @@
-var inputUsuario = document.getElementById('newTask');
-var ul = document.getElementById('ul');
-
-function verificarEntradaUsuario() {
-    if(inputUsuario.value) {
-        adicionarTarefa()
-    }
-}
+const inputUsuario = document.getElementById('newTask');
+const ul = document.getElementById('ul');
 
 function adicionarTarefa() {
-    var li = document.createElement('li');
+    const li = document.createElement('li');
     li.appendChild(document.createTextNode(inputUsuario.value));
     ul.appendChild(li);
+    
     inputUsuario.value = '';
     
     //criando botão para excluir tarefa
-    var botao = document.createElement('button');
-    botao.appendChild(document.createTextNode('X'));
-    li.appendChild(botao);
-    botao.addEventListener('click', deletarTarefa);
+    const botaoExcluirTarefa = document.createElement('button');
+    botaoExcluirTarefa.appendChild(document.createTextNode('X'));
+    li.appendChild(botaoExcluirTarefa);
+    botaoExcluirTarefa.addEventListener('click', deletarTarefa);
     
     function deletarTarefa() {
-        li.classList.add('delete');
+        li.remove();
     }
 }
 

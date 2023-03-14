@@ -8,15 +8,35 @@
     <title>Lista de Tarefas</title>
 </head>
 <body>
-
+    <h1 style="color: red; text-align: start;">PROJETO ESTÁ EM MUDANÇAS</h1>
     <h1>Lista de Tarefas</h1>
         
-    <div id="secao">
+    <!-- <div id="secao">
         <input id="newTask" type="text" placeholder="Insira a tarefa" required>
         <button onclick="adicionarTarefa()">Adicionar</button>
-    </div>
+    </div> -->
+    <dialog open="">
+        <h1>Nova Tarefa</h1>
+
+        <input type="text" placeholder="Título">
+        <input type="text" placeholder="Tarefa">
+        <div>
+            <button id="cancel-transaction">Fechar</button>
+            <button id="add-transaction">Adicionar</button>
+        </div>
+    </dialog>
              
-    <ul id="ul"></ul>
+    <button>NOVA TAREFA</button>
+    <ul id="ul">
+        <div>
+            <h2>Título</h2>
+            <li>Tarefa 1</li>
+            <li>Tarefa 1</li>
+            <li>Tarefa 1</li>
+            <li>Tarefa 1</li>
+            <li>Tarefa 1</li>
+        </div>
+    </ul>
            
     <script src="script.js"></script>
 </body>

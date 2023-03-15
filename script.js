@@ -12,7 +12,7 @@ buttonCloseModal.onclick = () => modal.close()
 buttonAddNewTask.onclick = adicionarTarefa
 
 function adicionarTarefa() {
-    const taskName = document.getElementById('taskName')
+    const inputTaskName = document.getElementById('taskName')
 
     const div = document.createElement('div')
     const h2 = document.createElement('h2')
@@ -20,11 +20,11 @@ function adicionarTarefa() {
     const botaoExcluirTarefa = document.createElement('button');
     
     botaoExcluirTarefa.innerText = 'X';
-    p.innerText = taskName.value
+    p.innerText = inputTaskName.value
     div.append(h2, p, botaoExcluirTarefa)
     ul.appendChild(div)
 
-    taskName.value = '';
+    inputTaskName.value = '';
 
     botaoExcluirTarefa.addEventListener('click', deletarTarefa);
 
@@ -34,9 +34,3 @@ function adicionarTarefa() {
 
     modal.close()
 }
-
-// inputUsuario.addEventListener('keypress', function (event){
-//     if(event.key == 'Enter'){
-//         adicionarTarefa()
-//     }
-// });

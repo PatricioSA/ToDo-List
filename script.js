@@ -26,7 +26,6 @@ function adicionarTarefa() {
 
     taskName.value = '';
 
-    //criando botão para excluir tarefa
     botaoExcluirTarefa.addEventListener('click', deletarTarefa);
 
     function deletarTarefa() {

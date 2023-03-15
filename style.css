@@ -9,30 +9,54 @@ body {
 }
 
 h1 {
+    margin: 2rem 0 4rem 0;
     text-align: center;
 }
 
 dialog {
     margin: 0 auto;
+    top: 30%;
+
     width: 250px;
     height: 250px;
+
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+
     text-align: center;
+}
+
+dialog h1 {
+    margin-top: 1.5rem;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .5);
 }
 
 dialog input {
     width: 200px;
     height: 30px;
-    margin-top: 1rem;
+
+    margin-top: 2rem;
 }
 
 dialog button {
     margin-top: 2rem;
+    padding: 0.5rem;
+
+    background-color: #fdef48;
+    border: none;
+    border-radius: .5rem;
+
+    cursor: pointer;
 }
 
 #btnNewTask {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     z-index: 9999;
 
     background-color: #000000;
@@ -46,18 +70,28 @@ dialog button {
     border: none;
 }
 
+.material-symbols-outlined {
+    font-size: 2.5rem;
+}
+
 #ul {
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
+
     margin-top: 2rem;
+
+    width: 1200px;
 }
 
 ul div {
     width: 300px;
     min-height: 300px;
     line-height: 250px;
+    position: relative;
 
     background-color: #fdef48;
 
@@ -66,10 +100,26 @@ ul div {
 
     text-align: center;
 
-    box-shadow: -21px 17px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: -21px 17px 16px 0px rgba(0, 0, 0, 0.2);
     transform: rotate(-1deg);
+}
+
+ul div::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 45%;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: red;
 }
 
 ul div p {
     font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    #ul {
+        width: 100%;
+    }
 }

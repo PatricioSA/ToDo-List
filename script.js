@@ -1,12 +1,36 @@
-const inputUsuario = document.getElementById('newTask');
+// const inputUsuario = document.getElementById('newTask');
 const ul = document.getElementById('ul');
 
+const modal = document.querySelector('dialog')
+const buttonCreateNewTask = document.getElementById('btnNewTask')
+const buttonCloseModal = document.getElementById('closeModal')
+const buttonAddNewTask = document.getElementById('addTask')
+
+buttonCreateNewTask.onclick = () => modal.showModal()
+
+buttonCloseModal.onclick = () => modal.close()
+
+buttonAddNewTask.onclick = adicionarTarefa
+
 function adicionarTarefa() {
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(inputUsuario.value));
-    ul.appendChild(li);
+    if(true) {
+        const taskTitle = document.getElementById('taskTitle')
+        const taskName = document.getElementById('taskName')
     
-    inputUsuario.value = '';
+        const div = document.createElement('div')
+        const h2 = document.createElement('h2')
+        const li = document.createElement('li');
+    
+        h2.innerText = taskTitle.value
+        li.innerText = taskName.value
+        div.append(h2, li)
+        ul.appendChild(div)
+
+        taskName.value = '';
+    }else {
+        
+    }
+    
     
     //criando botão para excluir tarefa
     const botaoExcluirTarefa = document.createElement('button');
@@ -19,8 +43,8 @@ function adicionarTarefa() {
     }
 }
 
-inputUsuario.addEventListener('keypress', function (event){
-    if(event.key == 'Enter'){
-        adicionarTarefa()
-    }
-});
+// inputUsuario.addEventListener('keypress', function (event){
+//     if(event.key == 'Enter'){
+//         adicionarTarefa()
+//     }
+// });

@@ -4,22 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fdf093;
+}
+
 h1 {
     text-align: center;
-}
-
-#secao {
-    text-align: center;
-}
-
-#newTask {
-    padding: 4px 8px 4px 8px;
-    border-radius: 5px;
-}
-
-button {
-    padding: 4px 8px 4px 8px;
-    border-radius: 5px;
 }
 
 dialog {
@@ -39,6 +29,23 @@ dialog button {
     margin-top: 2rem;
 }
 
+#btnNewTask {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    background-color: #000000;
+    color: #fff;
+
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 10rem;
+    border: none;
+}
+
 #ul {
     display: flex;
     justify-content: center;
@@ -50,28 +57,19 @@ dialog button {
 ul div {
     width: 300px;
     min-height: 300px;
+    line-height: 250px;
+
     background-color: #fdef48;
+
     padding: 10px;
-    font-size: 20px;
     border-radius: 5px;
+
+    text-align: center;
+
+    box-shadow: -21px 17px 16px 0px rgba(0,0,0,0.2);
+    transform: rotate(-1deg);
 }
 
-ul div li {
-    margin-left: 1.5rem;
-    margin-top: 1rem;
-}
-
-li > button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-li > button:hover {
-    background-color: red;
-}
-
-.delete {
-    display: none;
+ul div p {
+    font-size: 1.5rem;
 }
